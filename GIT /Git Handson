@@ -1,0 +1,72 @@
+GIT COMMANDS:
+
+git init
+git config --global user.email "shrikanthcr888@gmail.com"
+git config --global user.name "Shrikanth C R"
+git config --global --list         =To see the configuration details
+user.email=shrikanthcr888@gmail.com
+user.name=Shrikanth C R
+
+git clone https://github.com/shrikanthcr/Simtekway-Projects.git  =It downloads all the files and folders from git hub to local.
+
+git branch = It show the total available branches
+git branch branch-name = It create the new branch
+git checkout branch-name = It switched to the particular branch
+git checkout -b branch-name =It create the new branch & navigate to this branch
+git branch -D branch-name =To delete the branch
+
+mkdir test
+cd test
+touch one.java
+vim one.java
+
+mv test demo =it changes the folder name.
+git mv source destination = It changes the file name.
+
+git add .
+git add *
+git add file-name
+
+git commit -m "commit message"  =It moves file from  staging area to local git repository 
+git commit -a -m "commit message" =By executing this we can skip the git add commands
+
+git rm --cached <filename> 
+git reset HEAD <filename>  = It return from staging area to working area. (unstage)
+git checkout --filename =To discard the changes in working directory
+
+git remote add origin https://github.com/shrikanthcr/Simtekway-Projects.git
+git remote -v 
+git push origin branch-name
+git remote rm origin =It removes the github link 
+
+git push --set-upstream origin first-branch
+
+git pull origin branch-name
+
+GIT MERGING:
+If you want to merge branch from master to main 
+1st you need to checkout main
+git checkout main
+git merge master
+
+Git Rebase:
+git rebase -i HEAD~3  =3 represent the no of commits, By using this command we can join 3 commmits id to single commit id and we can drop commit.
+git rebase --abort  =To come out of the rebase 
+rm -fr .git/rebase-merge
+
+pick <commit> <commit message>
+squash <commit> <commit message>
+
+git rebase --edit-todo =It is a editor tool for rebase
+
+git tag demo1 commit id
+git tag demo2 commit id
+gi tag
+demo1
+demo2
+
+git checkout demo1
+git checkout demo1
+
+git diff 2 commit id = It findout the difference between 2 commits
+git cherry-pick commit id =It moves commit from 1 branch to another branch
